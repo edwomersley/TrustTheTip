@@ -2,7 +2,7 @@ Feature: User sign up and registration
 
   As a punter
   I want to become a member and add value to the community
-
+  # Background: This gets runs before the rest of the code, you can create some dinner 
 
   Scenario: A user signs up with valid information
     Given I am on the sign up page

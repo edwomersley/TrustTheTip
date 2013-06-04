@@ -13,4 +13,5 @@ Given I am on the users new page
 When I click the submit button
 Then the should be redirected to the users index page
 
-# A user creates a new list and describe what happens
+# A user creates a new list and describe what happens fill in the details and press save
+#

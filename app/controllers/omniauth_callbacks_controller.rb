@@ -1,9 +1,11 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def all
     # raise request.env["omniauth.auth"].to_yaml
-    user = User.from_omniauth(request.env["omniauth.auth"])
+    @user = User.from_omniauth(request.env["omniauth.auth"])
+    binding.pry
+    facebook = @user.facebook
+    @facebook.get_connection('me', 'friends').size
     #omniauth auth is the token that comes back from Facebook
-    
     # if user.persisted?
       sign_in_and_redirect user
        flash.notice = "Signed in!"

@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'pry'
+gem "koala", "~> 1.7.0rc1"
 
 
 # Gems used only for assets and not required

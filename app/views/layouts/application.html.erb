@@ -17,6 +17,7 @@
   <div class="navbar-inner">
     <% if user_signed_in? %>
     <a class="brand" href="#"><%=current_user.username%></a>
+    <img class="brand" src='<%=@image_url%>'/>
     <%end%>
     <a class="brand" href="#">TrustTheTip</a>
     <ul class="nav">
@@ -30,17 +31,7 @@
   </div>
 </div>
 
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="span10">Pulvinar phasellus pellentesque purus sed augue, phasellus etiam, augue pid. Ut egestas urna ac porttitor in. Tortor. Adipiscing, odio est, nunc quis? Urna porttitor, dolor aliquam magna, nisi, amet sed? Proin tincidunt massa scelerisque, diam magna, arcu. Sagittis? Enim ridiculus. Tortor scelerisque placerat turpis tincidunt, porttitor mid nisi, velit tincidunt adipiscing lundium, enim nisi! Pellentesque, arcu! Nisi rhoncus ac nec, purus. Arcu porta, amet dignissim nisi a enim nunc. Proin, sed augue, a sed integer. Parturient tincidunt elit, in cursus, in nunc nunc magna! Est hac pellentesque tincidunt tincidunt habitasse. Parturient lorem. Vut turpis tempor amet est proin in. Porttitor parturient egestas, non aliquet, egestas? Hac adipiscing arcu? Magna quis sit tristique vel amet montes sociis pid adipiscing arcu sed.
-</div>
-    <div class="span2">
-      <h2>About Us</h2>
-    </div>
-  </div> -->
-
- <div>
+<div>
   <%= yield %>
 </div>
 

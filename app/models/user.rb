@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
 
 
  def self.from_omniauth(auth)
+  binding.pry
   where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
     user.provider = auth.provider
     user.uid = auth.uid
@@ -32,6 +33,7 @@ class User < ActiveRecord::Base
     user.token = auth.credentials.token
     user.email = auth.info['email']
     user.password = auth.credentials.token
+    user.image_url = auth.info.image
     
     # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
     user.save!

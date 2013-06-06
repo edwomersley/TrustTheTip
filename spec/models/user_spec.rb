@@ -24,7 +24,7 @@ require 'spec_helper'
         
     it "should have many books" do
         @user.books.should_not eq(nil)
-        assert_equal, @user.books_is 1
+        # @user.books.should == 1
     end
 
     it "should have many cocktail_bars" do
@@ -41,5 +41,8 @@ require 'spec_helper'
   # end
 end
 
+# @apple.squishy?.should == true
+# apple.is_a?(Fruit).should be_true
+# apple.class.ancestors.should include Fruit
  
 

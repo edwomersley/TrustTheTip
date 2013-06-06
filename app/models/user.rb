@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :omniauthable, :omniauth_providers => [:facebook]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :image_url, :provider, :uid, :username
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :image_url, :provider, :uid, :username, :token
   # attr_accessible :title, :body
   has_many :restaurant_users
   has_many :restaurants, :through => :restaurant_users
@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
     user.email = auth.info['email']
     user.password = auth.credentials.token
     user.image_url = auth.info.image
+
     
     # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
     user.save!
@@ -40,11 +41,17 @@ class User < ActiveRecord::Base
     
 
 end
+#commented out while testing in the console
 
 def self.facebook(token)
   facebook ||= Koala::Facebook::API.new(token)
   facebook.get_connection('me', 'friends').count
 end
+
+# def facebook
+#   facebook ||= Koala::Facebook::API.new(token)
+#   # facebook.get_connection('me', 'friends').count
+# end
 
 # def friend_count
 #   facebook.get_connection('me', 'friends').size

@@ -3,23 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// .clearboth{
-//     clear:both;
-// }
-
-// *{
-//     border:1px solid black;
-// }
-
 *{
 font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
 }
 
 .span2{
-    border-right: 1px solid black;
     padding: 20px;
     background-color:lightgrey;
-    height: 18.5em;
+    height: 487px;
       .mystuff{
         text-align:center;
         border-bottom:1px solid black;
@@ -29,30 +20,63 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
         margin-bottom:50px;
         border:1px solid black;
         width:140px;
+        height:65px;
         border-radius:10px;
         text-align:center;
         background-color:lightblue;
+        margin-left: 15px;
+        padding-top: 20px;
         
     }
 }
 
+
+.span9{
+    background-color:lightgrey;
+    width:950px;
+}
 .expertadvice{
-        padding:10px;
+        padding-bottom:0px;
         border-bottom:1px solid black;
-        // margin-bottom:20px; 
-        background-color:lightgrey;
-    
+        padding-top: 16px;
+        
 }
 
 .clearboth{
-    margin-left: 60px;
-    width: 810px;
-    padding: 40px;
-    background-color:lightgrey;
-    #book{
-        border:1px solid black;
-        border-radius:10px;
-        background-color:lightpink;
-        width:100px;
+    height:450px;
+    .span4{
+        padding:35px;
+
+        .item{
+            padding:20px;
+            padding-bottom: 35px;
+            width:200px;
+            text-align:center;
+            border-radius:10px;
+            height:40px;
+            border:.1em solid black;
+            margin-bottom:3em;
+        }
+        .book{
+            background-color:#F2A0A0;
+        }
+        .film{
+            background-color:#F2A0A0;;
+        }
+        .music{
+            background-color:#F2A0A0;;
+        }
+      }
+      .span4{
+        .cocktailbar{
+            background-color:#F2A0A0;;
+        }
+        .restaurant{
+            background-color:#F2A0A0;;
+        }
+         .coffeeshop{
+            background-color:#F2A0A0;;
+        }
+
     }
 }

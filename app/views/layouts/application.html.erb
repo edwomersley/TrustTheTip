@@ -23,9 +23,9 @@
     <img class="brand" id="image" src='<%=@image_url%>'/>
     <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :id => 'signout', :class => 'brand' %>
     <%end%>
-    <%#= if user_signed_in? == false %>
-      <!-- <a class="brand" id="leftnav" href="#"><%#= render "devise/shared/links" %></a>
-    <%#end%> -->
+    <% if user_signed_in? == false %>
+      <a class="brand" id="leftnav" href="#"><%= render "devise/shared/links"%></a>
+    <%end%>
 
   </div>
 </div>

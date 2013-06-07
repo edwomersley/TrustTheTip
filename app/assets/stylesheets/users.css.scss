@@ -3,25 +3,56 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.expertadvice{
-    clear:both;
-}
+// .clearboth{
+//     clear:both;
+// }
 
 // *{
 //     border:1px solid black;
 // }
 
-.info{
-    .box {
+*{
+font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+
+.span2{
+    border-right: 1px solid black;
+    padding: 20px;
+    background-color:lightgrey;
+    height: 18.5em;
+      .mystuff{
+        text-align:center;
+        border-bottom:1px solid black;
+        margin-bottom:20px;
+      }
+      .box {
         margin-bottom:50px;
-        border:1px solid black
+        border:1px solid black;
+        width:140px;
+        border-radius:10px;
+        text-align:center;
+        background-color:lightblue;
+        
     }
 }
 
-// .clear-left{
-//     display:block;
-// }
+.expertadvice{
+        padding:10px;
+        border-bottom:1px solid black;
+        // margin-bottom:20px; 
+        background-color:lightgrey;
+    
+}
 
-// .box{
-//     border:1px solid black;
-// }
+.clearboth{
+    margin-left: 60px;
+    width: 810px;
+    padding: 40px;
+    background-color:lightgrey;
+    #book{
+        border:1px solid black;
+        border-radius:10px;
+        background-color:lightpink;
+        width:100px;
+    }
+}

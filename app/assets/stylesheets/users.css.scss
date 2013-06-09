@@ -11,6 +11,8 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
     padding: 20px;
     background-color:lightgrey;
     height: 487px;
+    -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
+
       .mystuff{
         text-align:center;
         border-bottom:1px solid black;
@@ -26,6 +28,7 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
         background-color:lightblue;
         margin-left: 15px;
         padding-top: 20px;
+        -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         
     }
 }
@@ -34,6 +37,8 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
 .span9{
     background-color:lightgrey;
     width:950px;
+    
+
 }
 .expertadvice{
         padding-bottom:0px;
@@ -59,24 +64,35 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
         }
         .book{
             background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
         .film{
-            background-color:#F2A0A0;;
+            background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
         .music{
-            background-color:#F2A0A0;;
+            background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
       }
       .span4{
         .cocktailbar{
-            background-color:#F2A0A0;;
+            background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
         .restaurant{
-            background-color:#F2A0A0;;
+            background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
          .coffeeshop{
-            background-color:#F2A0A0;;
+            background-color:#F2A0A0;
+            -webkit-box-shadow: 4px 0px 13px rgba(50, 50, 50, 0.39);
         }
 
     }
 }
+
+// .userlist{
+//     margin-top:10px;
+// }
+

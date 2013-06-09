@@ -53,6 +53,38 @@ end
 #   # facebook.get_connection('me', 'friends').count
 # end
 
+def self.select(current_user)
+r = []
+    @books = current_user.books
+        if @books != nil
+        r << @books
+    @restaurants = current_user.restaurants
+        if @restaurants != nil
+            r << @restaurants
+    @coffeeshops = current_user.coffee_shops
+        if @coffeeshops != nil
+            r << @coffeeshops
+    @films = current_user.films
+        if @films != nil
+            r << @films
+    @cocktailbars = current_user.cocktail_bars
+        if @cocktailbars != nil
+            r << @cocktailbars
+    @songs = current_user.songs
+        if @songs != nil
+           
+            r << @songs
+        end
+       end
+      end
+     end
+    end
+  end
+  return r 
+
+end
+
+
 # def friend_count
 #   facebook.get_connection('me', 'friends').size
 # # # rescue koala::Facebook::APIError => e

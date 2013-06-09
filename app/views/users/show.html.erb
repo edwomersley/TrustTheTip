@@ -1,0 +1,20 @@
+<div class="mylists">
+    <h1> My Lists </h1>
+</div>
+
+<div class="showlists">
+    <% @myinfo.each do |advice| %>
+
+        <% if advice.blank? %>
+        <%else%>
+        <div class="span4 userlist">
+                <h4><%= advice.name %>s <br></h4>
+                <% advice.each do |x| %>
+                <p><%=x.name%></p>
+                <% end %>
+        <%end%>
+        </div>
+    <% end %>
+</div>
+
+

@@ -10,18 +10,23 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :image_url, :provider, :uid, :username, :token
   # attr_accessible :title, :body
-  has_many :restaurant_users
-  has_many :restaurants, :through => :restaurant_users
-  has_many :book_users
-  has_many :books, :through => :book_users
-  has_many :film_users
-  has_many :films, :through => :film_users
-  has_many :coffee_shop_users
-  has_many :coffee_shops, :through => :coffee_shop_users
-  has_many :song_users
-  has_many :songs, :through => :song_users
-  has_many :cocktail_bar_users
-  has_many :cocktail_bars, :through => :cocktail_bar_users
+  # has_many :restaurant_users
+  # has_many :restaurants, :through => :restaurant_users
+  # has_many :book_users
+  # has_many :books, :through => :book_users
+  # has_many :film_users
+  # has_many :films, :through => :film_users
+  # has_many :coffee_shop_users
+  # has_many :coffee_shops, :through => :coffee_shop_users
+  # has_many :song_users
+  # has_many :songs, :through => :song_users
+  # has_many :cocktail_bar_users
+  # has_many :cocktail_bars, :through => :cocktail_bar_users
+  has_many :advisable_users
+  has_many :advisables, :through => :advisable_users, :source => :advisable
+
+  # current_user.books
+  # current_user.advisables.where(:type => 'Book')
 
 
  def self.from_omniauth(auth)

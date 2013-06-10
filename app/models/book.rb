@@ -1,5 +1,7 @@
-class Book < ActiveRecord::Base
+class Book < Advisable
   attr_accessible :author, :name
-  has_many :book_users
-  has_many :users, :through => :book_users
+  # has_many :book_users
+  # has_many :users, :through => :book_users
+
+
 end

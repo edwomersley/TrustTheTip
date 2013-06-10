@@ -8,4 +8,10 @@ User.blueprint do
 #      country_of_origin {"GB"}
 #      age { "3 days" }
 #      color { "red" }
+
+end
+
+Book.blueprint do
+    name {'Harry Potter'}
+    author {'J.K.Rowling'}
 end

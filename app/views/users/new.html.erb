@@ -1,0 +1,62 @@
+<div class="selectcategory">
+  <h1>Create a new list</h1>
+
+<div class="btn-group">
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    Select a list category <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+   <li><a href="#" class="songform">Songs</a></li>
+   <li><a href="#" class="restaurantform">Restaurants</a></li>
+   <li><a href="#" class="coffeeshopform">Coffee Shops</a></li>
+   <li><a href="#" class="filmform">Films</a></li>
+   <li><a href="#" class="cocktailbarform">CocktailBars</a></li>
+   <li><a href="#" class="bookform">Books</a></li>
+ </ul>
+</div>
+</div><br>
+
+<li><%#=link_to 'Books', new_user_path, :remote => true, :method => :post %></li>
+
+   
+<%#binding.pry%>
+<div class="mainbook">
+<%= form_for @book, :url => { :action => "create" } do |f| %>
+<div class="bookform">
+  <h5>Book 1</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+<div class="bookform">
+  <h5>Book 2</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+<div class="bookform">
+  <h5>Book 3</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+<div class="bookform">
+  <h5>Book 4</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+<div class="bookform">
+  <h5>Book 5</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+<div class="bookform">
+  <h5>Book 6</h5>
+  <%= f.text_field :name, :placeholder => 'Book title' %><br>
+  <%= f.text_field :author, :placeholder => 'Book author' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+</div>
+<% end %>
+</div>
+           
+
+
+

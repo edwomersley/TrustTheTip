@@ -1,20 +1,22 @@
-<div class="mylists">
-    <h1> My Lists </h1>
-</div>
+<!-- <div class="mylists">
+  <h1> My Lists </h1>
+</div> -->
 
 <div class="showlists">
-    <% @myinfo.each do |advice| %>
-
-        <% if advice.blank? %>
-        <%else%>
+  <% @last_type = nil %>
+  <% @myinfo.each_with_index do |advice, i| %>
+   <%#binding.pry%>
+    <% if @last_type == nil || @last_type != advice.class %>
         <div class="span4 userlist">
-                <h4><%= advice.name %>s <br></h4>
-                <% advice.each do |x| %>
-                <p><%=x.name%></p>
-                <% end %>
-        <%end%>
-        </div>
+        <%#= render :partial => "advice/#{advice.class.to_s.downcase}", :locals => { :advice => advice } %>
+       <h3> <%= @lasttype = advice.class %> </h3>
+    <%end%>
+        <%= advice.name %> 
+      
+      <% if @myinfo[i + 1] != advice.class %>
+    </div>
     <% end %>
-</div>
+        <% @last_type = advice.class %>
+        <% end %>
 
-
+  

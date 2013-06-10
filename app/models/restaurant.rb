@@ -1,5 +1,6 @@
-class Restaurant < ActiveRecord::Base
+class Restaurant < Advisable
   attr_accessible :latitude, :location, :longitude, :name
-  has_many :users, :through => :restaurant_users
-  has_many :restaurant_users
+  # has_many :users, :through => :restaurant_users
+  # has_many :restaurant_users
+  has_many :advisables, :as => :type
 end

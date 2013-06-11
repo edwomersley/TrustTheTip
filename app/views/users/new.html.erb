@@ -23,7 +23,7 @@
 <%= form_for @books, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="bookform">
-  <h5>Book 1</h5>
+  <h5>Book</h5>
   <%= f.text_field :name, :placeholder => 'Book title' %><br>
   <%= f.text_field :author, :placeholder => 'Book author' %><br>
 </div>
@@ -36,7 +36,7 @@
 <%= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="restaurantform">
-  <h5>Restaurant 1</h5>
+  <h5>Restaurant</h5>
   <%= f.text_field :name, :placeholder => 'Restaurant name' %><br>
   <%= f.text_field :location, :placeholder => 'Address' %><br>
 </div>
@@ -48,7 +48,7 @@
 <%= form_for @films, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="filmform">
-  <h5>Film 1</h5>
+  <h5>Films</h5>
   <%= f.text_field :name, :placeholder => 'Film name' %><br>
 </div>
   <%= f.submit "Create", :class => 'btn' %>
@@ -59,7 +59,7 @@
 <%= form_for @songs, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="songform">
-  <h5>Song 1</h5>
+  <h5>Songs</h5>
   <%= f.text_field :name, :placeholder => 'Song name' %><br>
   <%= f.text_field :artist, :placeholder => 'artist' %><br>
 </div>
@@ -71,13 +71,26 @@
 <%= form_for @coffeeshops, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="coffeeshopform">
-  <h5>Coffee Shop 1</h5>
+  <h5>Coffee Shop</h5>
   <%= f.text_field :name, :placeholder => 'name' %><br>
   <%= f.text_field :location, :placeholder => 'location' %><br>
 </div>
   <%= f.submit "Create", :class => 'btn' %>
 <% end %>
 </div>
+
+<div class="maincocktailbar">
+<%= form_for @cocktailbars, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
+<div class="cocktailbarform">
+  <h5>Cocktail Bars</h5>
+  <%= f.text_field :name, :placeholder => 'name' %><br>
+  <%= f.text_field :location, :placeholder => 'location' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+<% end %>
+</div>
+
 
 
            

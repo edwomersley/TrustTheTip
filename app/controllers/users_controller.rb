@@ -22,9 +22,19 @@ class UsersController < ApplicationController
    end
 
    def new
-   @book = Book.new
-   end
+    
+    @books = Book.new
+    @restaurants = Restaurant.new
+    @films = Film.new
+    @songs = Song.new
+    @coffeeshops = CoffeeShop.new
+    @cocktailbars = CocktailBar.new
+   
+    
+    end
 
    def create
+    binding.pry
+    @book = Book.create(params[:book])
    end
 end

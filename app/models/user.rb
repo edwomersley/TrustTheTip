@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   # has_many :cocktail_bar_users
   # has_many :cocktail_bars, :through => :cocktail_bar_users
   has_many :advisable_users
-  has_many :advisables, :through => :advisable_users, :source => :advisable
+  has_many :advisables, :through => :advisable_users
 
   # current_user.books
   # current_user.advisables.where(:type => 'Book')

@@ -3,20 +3,21 @@
 </div> -->
 
 <div class="showlists">
-  <% @last_type = nil %>
-  <% @myinfo.each_with_index do |advice, i| %>
-   <%#binding.pry%>
-    <% if @last_type == nil || @last_type != advice.class %>
-        <div class="span4 userlist">
-        <%#= render :partial => "advice/#{advice.class.to_s.downcase}", :locals => { :advice => advice } %>
-       <h3> <%= @lasttype = advice.class %> </h3>
-    <%end%>
-        <%= advice.name %> 
+    <% @last_type = nil %>
+    <% @myinfo.each_with_index do |advice, i| %>
+    <%#binding.pry%>
+        <% if @last_type == nil || @last_type != advice.class %>
+          <div class="span4 userlist">
+            <%#= render :partial => "advice/#{advice.class.to_s.downcase}", :locals => { :advice => advice } %>
+            <h3> <%= @lasttype = advice.class %> </h3>
+        <%end%>
+    <%= advice.name %> <br>
+
+      <% if @myinfo[i + 1].class != advice.class %>
       
-      <% if @myinfo[i + 1] != advice.class %>
-    </div>
-    <% end %>
-        <% @last_type = advice.class %>
-        <% end %>
+  </div>
+  <% end %>
+  <% @last_type = advice.class %>
+  <% end %>
 
   

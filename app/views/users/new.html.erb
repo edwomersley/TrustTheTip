@@ -18,44 +18,68 @@
 
 <li><%#=link_to 'Books', new_user_path, :remote => true, :method => :post %></li>
 
-   
-<%#binding.pry%>
+
 <div class="mainbook">
-<%= form_for @book, :url => { :action => "create" } do |f| %>
+<%= form_for @books, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
 <div class="bookform">
   <h5>Book 1</h5>
   <%= f.text_field :name, :placeholder => 'Book title' %><br>
   <%= f.text_field :author, :placeholder => 'Book author' %><br>
 </div>
-<div class="bookform">
-  <h5>Book 2</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
-</div>
-<div class="bookform">
-  <h5>Book 3</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
-</div>
-<div class="bookform">
-  <h5>Book 4</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
-</div>
-<div class="bookform">
-  <h5>Book 5</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
-</div>
-<div class="bookform">
-  <h5>Book 6</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
-</div>
   <%= f.submit "Create", :class => 'btn' %>
-</div>
 <% end %>
 </div>
+
+
+<div class="mainrestaurant">
+<%= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
+<div class="restaurantform">
+  <h5>Restaurant 1</h5>
+  <%= f.text_field :name, :placeholder => 'Restaurant name' %><br>
+  <%= f.text_field :location, :placeholder => 'Address' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+<% end %>
+</div>
+
+<div class="mainfilm">
+<%= form_for @films, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
+<div class="filmform">
+  <h5>Film 1</h5>
+  <%= f.text_field :name, :placeholder => 'Film name' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+<% end %>
+</div>
+
+<div class="mainsong">
+<%= form_for @songs, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
+<div class="songform">
+  <h5>Song 1</h5>
+  <%= f.text_field :name, :placeholder => 'Song name' %><br>
+  <%= f.text_field :artist, :placeholder => 'artist' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+<% end %>
+</div>
+
+<div class="maincoffeeshop">
+<%= form_for @coffeeshops, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+
+<div class="coffeeshopform">
+  <h5>Coffee Shop 1</h5>
+  <%= f.text_field :name, :placeholder => 'name' %><br>
+  <%= f.text_field :location, :placeholder => 'location' %><br>
+</div>
+  <%= f.submit "Create", :class => 'btn' %>
+<% end %>
+</div>
+
+
            
 
 

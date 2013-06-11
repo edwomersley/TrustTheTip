@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-06-10T20:12:26+01:00">2013-06-10T20:12:26+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-06-10T21:27:29+01:00">2013-06-10T21:27:29+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">75.84%</span></span>
+    (<span class="covered_percent"><span class="red">75.42%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>178</b> relevant lines. 
+    <b>179</b> relevant lines. 
     <span class="green"><b>135</b> lines covered</span> and
-    <span class="red"><b>43</b> lines missed </span>
+    <span class="red"><b>44</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#45b03ae3e4ab5dcf1e2710e3675c6a9349e5c6e9" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">45.45 %</td>
-        <td>30</td>
-        <td>11</td>
+        <td class="red strong">41.67 %</td>
+        <td>31</td>
+        <td>12</td>
         <td>5</td>
-        <td>6</td>
-        <td>0.5</td>
+        <td>7</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -657,11 +657,11 @@
         <div class="source_table" id="45b03ae3e4ab5dcf1e2710e3675c6a9349e5c6e9">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="red">45.45 %</span> covered</h4>
+    <h4><span class="red">41.67 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
+      <b>12</b> relevant lines. 
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -836,13 +836,19 @@
           <code class="ruby">   def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">    binding.pry</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -1853,7 +1859,7 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :advisables, :through =&gt; :advisable_users, :source =&gt; :advisable</code>
+          <code class="ruby">  has_many :advisables, :through =&gt; :advisable_users</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">

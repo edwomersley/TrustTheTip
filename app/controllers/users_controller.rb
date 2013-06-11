@@ -8,33 +8,29 @@ class UsersController < ApplicationController
    end
 
    def show
-    @myinfo = current_user.advisables.order(:type)
-
-#     @myinfo.each do |advice|
-#       if advice.class == @lasttype
-      
-#       else
-#         advice.class != @lasttype
-#     binding.pry
-#   end
-# end
-
+      @myinfo = current_user.advisables.order(:type)
    end
 
    def new
-    
-    @books = Book.new
-    @restaurants = Restaurant.new
-    @films = Film.new
-    @songs = Song.new
-    @coffeeshops = CoffeeShop.new
-    @cocktailbars = CocktailBar.new
-   
-    
-    end
-
-   def create
-    binding.pry
-    @book = Book.create(params[:book])
+      @books = Book.new
+      @restaurants = Restaurant.new
+      @films = Film.new
+      @songs = Song.new
+      @coffeeshops = CoffeeShop.new
+      @cocktailbars = CocktailBar.new
+      @user = current_user
    end
+
+   def book
+      @book = Book.create(params[:book])
+      @book.save!
+      @advisables = Advisable.all
+
+      @advisableuser = AdvisableUser.create(:user_id => current_user.id, :advisable_id => @advisables.last.id)
+      @advisableuser.save!
+
+      redirect_to user_path
+   end
+
+   
 end

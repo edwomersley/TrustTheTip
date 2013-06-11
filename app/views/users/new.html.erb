@@ -20,7 +20,7 @@
 
 
 <div class="mainbook">
-<%= form_for @books, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+<%= form_for @books, :url => book_user_path(@user.id), :method => 'POST' do |f| %>
 
 <div class="bookform">
   <h5>Book</h5>
@@ -32,17 +32,17 @@
 </div>
 
 
-<div class="mainrestaurant">
-<%= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+<!-- <div class="mainrestaurant">
+<%#= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
 <div class="restaurantform">
   <h5>Restaurant</h5>
-  <%= f.text_field :name, :placeholder => 'Restaurant name' %><br>
-  <%= f.text_field :location, :placeholder => 'Address' %><br>
+  <%#= f.text_field :name, :placeholder => 'Restaurant name' %><br>
+  <%#= f.text_field :location, :placeholder => 'Address' %><br>
 </div>
-  <%= f.submit "Create", :class => 'btn' %>
-<% end %>
-</div>
+  <%#= f.submit "Create", :class => 'btn' %>
+<%# end %>
+</div> -->
 
 <div class="mainfilm">
 <%= form_for @films, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>

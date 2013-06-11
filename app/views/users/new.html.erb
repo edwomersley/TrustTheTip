@@ -14,35 +14,37 @@
    <li><a href="#" class="bookform">Books</a></li>
  </ul>
 </div>
-</div><br>
-
-<li><%#=link_to 'Books', new_user_path, :remote => true, :method => :post %></li>
-
-
-<div class="mainbook">
-<%= form_for @books, :url => book_user_path(@user.id), :method => 'POST' do |f| %>
-
-<div class="bookform">
-  <h5>Book</h5>
-  <%= f.text_field :name, :placeholder => 'Book title' %><br>
-  <%= f.text_field :author, :placeholder => 'Book author' %><br>
 </div>
-  <%= f.submit "Create", :class => 'btn' %>
+
+<% for book in @books %>
+  <div class="mainbook">
+    <%= form_for @books, :url => book_user_path(@user.id), :method => 'POST' do |f| %>
+
+      <div class="bookform">
+        <h5>Book</h5>
+        <%= f.text_field :name, :placeholder => 'Book title' %><br>
+        <%= f.text_field :author, :placeholder => 'Book author' %>
+        <button class="addbook">Add another book</button>
+      </div>
+      <%= f.submit "Create", :class => 'btn' %>
+    <% end %>
+  </div>
 <% end %>
-</div>
 
+<% for restaurant in @restaurants %>
+  <div class="mainrestaurant">
+    <%= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
 
-<!-- <div class="mainrestaurant">
-<%#= form_for @restaurants, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>
+    <div class="restaurantform">
+      <h5>Restaurant</h5>
+      <%= f.text_field :name, :placeholder => 'Restaurant name' %><br>
+      <%= f.text_field :location, :placeholder => 'Address' %><br>
+  </div>
+    <%= f.submit "Create", :class => 'btn' %>
+  <%end%>
+ </div>
+<%end%>
 
-<div class="restaurantform">
-  <h5>Restaurant</h5>
-  <%#= f.text_field :name, :placeholder => 'Restaurant name' %><br>
-  <%#= f.text_field :location, :placeholder => 'Address' %><br>
-</div>
-  <%#= f.submit "Create", :class => 'btn' %>
-<%# end %>
-</div> -->
 
 <div class="mainfilm">
 <%= form_for @films, :url => {:controller => :users, :action => "create", :method => :post } do |f| %>

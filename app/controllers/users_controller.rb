@@ -12,8 +12,14 @@ class UsersController < ApplicationController
    end
 
    def new
-      @books = Book.new
-      @restaurants = Restaurant.new
+      @books = []
+        2.times do
+          @books << Book.new
+      end
+       @restaurants = []
+        2.times do
+          @restaurants << Restaurant.new
+      end
       @films = Film.new
       @songs = Song.new
       @coffeeshops = CoffeeShop.new
@@ -22,6 +28,7 @@ class UsersController < ApplicationController
    end
 
    def book
+   
       @book = Book.create(params[:book])
       @book.save!
       @advisables = Advisable.all
@@ -29,8 +36,8 @@ class UsersController < ApplicationController
       @advisableuser = AdvisableUser.create(:user_id => current_user.id, :advisable_id => @advisables.last.id)
       @advisableuser.save!
 
-      redirect_to user_path
+      redirect_to new_user_path
    end
 
-   
+
 end

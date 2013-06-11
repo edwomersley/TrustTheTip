@@ -53,4 +53,5 @@ $('.cocktailbarform').click(function(){
     $('.maincoffeeshop').hide();
     $('.maincocktailbar').show();
 });
+
 });

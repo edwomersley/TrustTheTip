@@ -1,0 +1,8 @@
+<%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
+        <p>
+          Name: <%= advisable_form.text_field :name %>
+          Author: <%= advisable_form.text_field :author %>
+          Artist: <%= advisable_form.text_field :artist %>
+          Location: <%= advisable_form.text_field :location %>
+        </p>
+      <% end %>

@@ -1,30 +1,24 @@
 <h3>Create a new tiplist</h3>
 
-<%= form_for :tiplist, :url => tiplistforms_path, :action => :create, :remote => true do |f| %>
+<%= form_for :tiplist, :url => tiplists_path, :action => :create do |f| %>
   <p>
-    Name: <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> add 
+    Name: <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 
   </p>
-    <p><%= submit_tag "Create Tiplist" %></p>
-  <%end%>
-
-
-   <%#=link_to image_tag('like.jpg', :width => 20),like_to_do_item_path(to_do_item.id), :remote => true, :method => :post %>
-
-
-
+   
 <div class="restaurantcoffeecocktail">
-    <%# for advisable in @tiplist.advisables %>
-      <%#= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
+    <% for advisable in @tiplist.advisables %>
+      <%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
         <p>
-          Name: <%#= advisable_form.text_field :name %>
-          Author: <%#= advisable_form.text_field :author %>
-          Artist: <%#= advisable_form.text_field :artist %>
-          Location: <%#= advisable_form.text_field :location %>
+          Name: <%= advisable_form.text_field :name %>
+          Author: <%= advisable_form.text_field :author %>
+          Artist: <%= advisable_form.text_field :artist %>
+          Location: <%= advisable_form.text_field :location %>
         </p>
-      <%# end %>
-    <%# end %>
-    <p><%#= submit_tag "Create Tiplist" %></p>
+      <% end %>
+    <% end %>
+    <p><%= submit_tag "Create Tiplist" %></p>
 </div>
+<% end %>
 <!-- 
 <div class="film">
     <% for advisable in @tiplist.advisables %>

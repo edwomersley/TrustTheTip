@@ -11,6 +11,8 @@ devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   resources :tiplistforms
 
+  resources :books, only: [:index]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
    

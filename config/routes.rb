@@ -1,11 +1,6 @@
 Trustthetip::Application.routes.draw do
-  get "tiplistform/index"
-
-  get "tiplistform/create"
-
-  get "tiplistform/show"
-
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  
+devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :users do
     member do 
       post :book

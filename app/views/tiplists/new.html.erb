@@ -11,52 +11,11 @@
   </p>
    
 <div class="restaurantcoffeecocktail">
-    <% for advisable in @tiplist.advisables %>
-      <%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
-        <p>
-          Name: <%= advisable_form.text_field :name %>
-          Author: <%= advisable_form.text_field :author %>
-          Artist: <%= advisable_form.text_field :artist %>
-          Location: <%= advisable_form.text_field :location %>
-        </p>
-      <% end %>
+    <% for @advisable in @tiplist.advisables %>
+      <div class="rendereddiv">
+      </div>
+      <%#= render :partial => 'tiplists' %>
     <% end %>
-    <p><%= submit_tag "Create Tiplist" %></p>
 </div>
 <% end %>
-<!-- 
-<div class="film">
-    <% for advisable in @tiplist.advisables %>
-      <%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
-        <p>
-          Name: <%= advisable_form.text_field :name %>
-        </p>
-      <% end %>
-    <% end %>
-    <p><%= submit_tag "Create Tiplist" %></p>
-</div>
-
-<div class="song">
-    <% for advisable in @tiplist.advisables %>
-      <%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
-        <p>
-          Name: <%= advisable_form.text_field :name %>
-          Artist: <%= advisable_form.text_field :artist %>
-        </p>
-      <% end %>
-    <% end %>
-    <p><%= submit_tag "Create Tiplist" %></p>
-</div>
-
-<div class="book">
-    <% for advisable in @tiplist.advisables %>
-      <%= fields_for "tiplist[advisable_attributes][]", advisable do |advisable_form| %>
-        <p>
-          Name: <%= advisable_form.text_field :name %>
-          Author: <%= advisable_form.text_field :author %>
-        </p>
-      <% end %>
-    <% end %>
-    <p><%= submit_tag "Create Tiplist" %></p>
-</div> -->
-<%#end%>
+<p><%= submit_tag "Create Tiplist" %></p>

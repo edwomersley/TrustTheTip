@@ -3,9 +3,7 @@ class TiplistformsController < ApplicationController
   end
 
   def create
-   binding.pry
-   advisable.class = params[:tiplist][:name]
-   advisable.class.save!
+   @advisablez= params[:tiplist][:name]
    #render JS that knows how to append html to page
   end
 

@@ -1,0 +1,11 @@
+<div class="advisable">
+<%= fields_for "tiplist[advisable_attributes][]", @advisable do |advisable_form| %>
+  <p>
+    Advisable: <%= advisable_form.text_field :name %>
+    Advisable: <%= advisable_form.text_field :author %>
+    Advisable: <%= advisable_form.text_field :artist %>
+    Advisable: <%= advisable_form.text_field :location %>
+    <%#= link_to_function "remove", "$(this).up('.task').remove()" %>
+  </p>
+<% end %>
+</div>

@@ -1,5 +1,10 @@
 <h3>Create a new tiplist</h3>
 
+<%=form_tag tiplistforms_path, :remote => true do |f| %>
+  <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 
+  <p><%= submit_tag "Choose category" %></p>
+<%end%>
+
 <%= form_for :tiplist, :url => tiplists_path, :action => :create do |f| %>
   <p>
     Name: <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 

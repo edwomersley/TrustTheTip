@@ -1,0 +1,20 @@
+<h1>Expert Restaurant Lists</h1>
+
+<div class="container">
+    <div class="bookshow">
+      <% @users.each do |x| %>
+        <div class='span3 encapsulated'>
+             <div class='biousername'>
+               <%= x.username %>
+             </div>
+             <%=image_tag x.image_url, :class => 'usersimage' %>
+          
+             <% x.advisables.where(:type => 'Restaurant').first(10).each do |y| %>
+             <div class='bioimage'>
+               <%=link_to y.name, restaurant_path(y.id)%>
+             </div>
+             <%end%>
+    </div> 
+    <%end%>
+    </div>
+</div>

@@ -18,7 +18,7 @@
   <div class="navbar-inner">
     <a class="brand" id="leftnav" href="#">Trust The Tip</a>
     <% if user_signed_in? %>
-    <a class="brand" id="rightnav" href="#">Home</a>
+    <a class="brand" id="rightnav" href="#"><%=link_to 'Home', users_path, :class => 'brand' %></a>
     <a class="brand" href="#"><%=current_user.username%></a>
     <img class="brand" id="image" src='<%=@image_url%>'/>
     <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :id => 'signout', :class => 'brand' %>

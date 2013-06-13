@@ -1,21 +1,57 @@
 <h3>Create a new tiplist</h3>
 
-<%=form_tag tiplistforms_path, :remote => true do |f| %>
-  <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 
-  <p><%= submit_tag "Choose category" %></p>
-<%end%>
+<%#=form_tag tiplistforms_path, :remote => true do |f| %>
+  <%#= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 
+ <!--  <p><%#= submit_tag "Choose category" %></p> -->
+<%#end%>
 
 <%= form_for :tiplist, :url => tiplists_path, :action => :create do |f| %>
   <p>
-    Name: <%= select(:tiplist, :name, [['Book', 'Book'], ['Song', 'Song'], ['CoffeeShop', 'CoffeeShop'], ['CocktailBar', 'CocktailBar'], ['Restaurant', 'Restaurant'], ['Film', 'Film']]) %> 
+    Name: <%= select(:tiplist, :name, [['Book', 'Book', :class=>'bookselect'], ['Song', 'Song', :class=>'songselect'], ['CoffeeShop', 'CoffeeShop', :class=>'coffeeshopselect'], ['CocktailBar', 'CocktailBar', :class=>'cocktailbarselect'], ['Restaurant', 'Restaurant', :class=>'restaurantselect'], ['Film', 'Film', :class=>'filmselect']]) %> 
   </p>
    
-<div class="restaurantcoffeecocktail">
-    <% for @advisable in @tiplist.advisables %>
-      <div class="rendereddiv">
-      </div>
-      <%#= render :partial => 'tiplists' %>
-    <% end %>
-</div>
+  <div class="container">
+      <% for @advisable in @tiplist.advisables %>
+
+        <div class="coffeerestaurantcocktailform">
+            <%= fields_for "tiplist[advisable_attributes][]", @advisable do |advisable_form| %>
+              <p>
+                Name: <%= advisable_form.text_field :name %>
+                Artist: <%= advisable_form.text_field :artist %>
+                Author: <%= advisable_form.text_field :author %>
+                Location: <%= advisable_form.text_field :location %>
+              </p>
+            <% end %>
+        </div>
+
+       <!--  <div class="filmform">
+            <%#= fields_for "tiplist[advisable_attributes][]", @advisable do |advisable_form| %>
+              <p>
+                Name: <%#= advisable_form.text_field :name %>
+              </p>
+            <%# end %>
+        </div>
+
+        <div class="bookform">
+            <%#= fields_for "tiplist[advisable_attributes][]", @advisable do |advisable_form| %>
+              <p>
+                Name: <%#= advisable_form.text_field :name %>
+                Author: <%#= advisable_form.text_field :author %>
+              </p>
+            <%# end %>
+        </div>
+
+          <div class="songform">
+            <%#= fields_for "tiplist[advisable_attributes][]", @advisable do |advisable_form| %>
+              <p>
+                Name: <%#= advisable_form.text_field :name %>
+                Artist: <%#= advisable_form.text_field :artist %>
+              </p>
+            <%# end %>
+        </div>
+
+      <%# end %>
+  </div> -->
 <% end %>
 <p><%= submit_tag "Create Tiplist" %></p>
+<% end %>

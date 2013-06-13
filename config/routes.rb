@@ -1,5 +1,11 @@
 Trustthetip::Application.routes.draw do
   
+  get "songs/index"
+
+  get "coffee_shops/index"
+
+  get "cocktail_bars/index"
+
 devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :users do
     member do 
@@ -12,6 +18,12 @@ devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :tiplistforms
 
   resources :books, only: [:index]
+  resources :restaurants, only: [:index, :show]
+  resources :films, only: [:index]
+  resources :coffee_shops, only: [:index]
+  resources :cocktail_bars, only: [:index]
+  resources :songs, only: [:index]
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -4,6 +4,7 @@ class TiplistformsController < ApplicationController
 
   def create
    @advisablescategory= params[:tiplist][:name]
+   
    #render JS that knows how to append html to page
   end
 

@@ -24,29 +24,29 @@ class User < ActiveRecord::Base
   has_many :cocktail_bars, :through => :cocktail_bar_users
 
 
- def self.from_omniauth(auth)
-  where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.username = auth.info.nickname
-    user.token = auth.credentials.token
-    user.email = auth.info['email']
-    user.password = auth.credentials.token
-    user.image_url = auth.info.image
+#  def self.from_omniauth(auth)
+#   where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+#     user.provider = auth.provider
+#     user.uid = auth.uid
+#     user.username = auth.info.nickname
+#     user.token = auth.credentials.token
+#     user.email = auth.info['email']
+#     user.password = auth.credentials.token
+#     user.image_url = auth.info.image
 
     
-    # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-    user.save!
-  end
+#     # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+#     user.save!
+#   end
     
 
-end
-#commented out while testing in the console
+# end
+# #commented out while testing in the console
 
-def self.facebook(token)
-  facebook ||= Koala::Facebook::API.new(token)
-  facebook.get_connection('me', 'friends').count
-end
+# def self.facebook(token)
+#   facebook ||= Koala::Facebook::API.new(token)
+#   facebook.get_connection('me', 'friends').count
+# end
 
 # def facebook
 #   facebook ||= Koala::Facebook::API.new(token)
